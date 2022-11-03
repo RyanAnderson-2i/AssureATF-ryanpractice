@@ -1,16 +1,25 @@
 package UI.pages;
 
-
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.PageFactory;
 
 @DefaultUrl("page:webdriver.base.url")
 public class BaseURLPage extends PageObject {
 
-    @FindBy(css = "h1")
+   // public BaseURLPage(WebDriver driver){
+        //super(driver);
+    //}
+
+    //public BaseURLPage(){
+        //PageFactory.initElements(super.getDriver(), this);
+    //}
+
+    @FindBy(css = "div")
     WebElement h1;
 
     public String getH1(){
